@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7dIQGDjCPrgJGDzjJb9aP9ThSUfG+ik6HecDbuK5nh9iZAe2utSrHEK35+r78H6wqDndj299oVK7f6hCagmc/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\Sql_dz3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Den\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
