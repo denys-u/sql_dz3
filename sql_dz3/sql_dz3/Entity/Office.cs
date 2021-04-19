@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sql_dz3.Entity
+﻿namespace Sql_dz3.Entity
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Office
     {
         public int Id { get; set; }
@@ -11,5 +11,7 @@ namespace Sql_dz3.Entity
         public string Title { get; set; }
 
         public string Location { get; set; }
+
+        public List<Employee> Employee { get; set; } = new List<Employee>();
     }
 }

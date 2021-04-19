@@ -24,6 +24,6 @@
 
         public Office Office { get; set; }
 
-        public EmployeeProject Project { get; set; }
+        public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
     }
 }
