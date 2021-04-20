@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "DESKTOP-1GHQEP1\\SQLEXPRESS;Database=CompanyDB;Integrated Security=True"
+  }
+}
