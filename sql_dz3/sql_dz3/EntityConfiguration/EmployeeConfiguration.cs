@@ -19,12 +19,12 @@
             builder.Property(p => p.DateOfBirth).IsRequired().HasColumnName("DateOfBirth").HasColumnType("datetime2");
 
             builder.HasOne(d => d.Office)
-                .WithMany(p => p.Employees)
+                .WithMany(p => p.Employee)
                 .HasForeignKey(d => d.OfficeId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(d => d.Title)
-                .WithOne(p => p.Employee)
+                .WithOne(p => p.Employees)
                 .HasForeignKey(b => b.TitleId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
