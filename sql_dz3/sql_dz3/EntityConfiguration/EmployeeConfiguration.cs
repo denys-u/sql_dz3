@@ -12,11 +12,11 @@
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
             builder.ToTable("Employee").HasKey(p => p.Id);
-            builder.Property(p => p.Id).HasColumnName("Id");
+            builder.Property(p => p.Id).HasColumnName("EmployeeId");
             builder.Property(p => p.FirstName).IsRequired().HasColumnName("FirstName").HasMaxLength(20);
             builder.Property(p => p.LastName).IsRequired().HasColumnName("LastName").HasMaxLength(20);
-            builder.Property(p => p.HiredDate).IsRequired().HasColumnName("HiredDate").HasColumnType("smalldatetime");
-            builder.Property(p => p.DateOfBirth).IsRequired().HasColumnName("DateOfBirth").HasColumnType("smalldatetime");
+            builder.Property(p => p.HiredDate).IsRequired().HasColumnName("HiredDate").HasColumnType("datetime2");
+            builder.Property(p => p.DateOfBirth).IsRequired().HasColumnName("DateOfBirth").HasColumnType("datetime2");
         }
     }
 }
