@@ -14,7 +14,7 @@
             builder.ToTable("EmployeeProject").HasKey(p => p.Id);
             builder.Property(p => p.Id).HasColumnName("EmployeeProjectId");
             builder.Property(p => p.Rate).IsRequired().HasColumnName("Rate").HasColumnType("money");
-            builder.Property(p => p.StartedDate).IsRequired().HasColumnName("StartedDate").HasColumnType("datetime2");
+            builder.Property(p => p.StartDate).IsRequired().HasColumnName("StartDate").HasColumnType("datetime2");
 
             builder.HasOne(d => d.Employee)
                 .WithMany(p => p.EmployeeProjects)
