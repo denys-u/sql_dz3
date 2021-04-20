@@ -15,6 +15,16 @@
             builder.Property(p => p.Id).HasColumnName("EmployeeProjectId");
             builder.Property(p => p.Rate).IsRequired().HasColumnName("Rate").HasColumnType("money");
             builder.Property(p => p.StartedDate).IsRequired().HasColumnName("StartedDate").HasColumnType("datetime2");
+
+            builder.HasOne(d => d.Employee)
+                .WithMany(p => p.EmployeeProjects)
+                .HasForeignKey(d => d.EmployeeId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(d => d.Project)
+                .WithOne(p => p.EmployeeProject)
+                .HasForeignKey(b => b.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
