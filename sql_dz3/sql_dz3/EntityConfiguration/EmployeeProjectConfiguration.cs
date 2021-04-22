@@ -22,7 +22,7 @@
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(d => d.Project)
-                .WithOne(p => p.EmployeeProject)
+                .WithMany(p => p.EmployeeProjects)
                 .HasForeignKey(b => b.ProjectId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
