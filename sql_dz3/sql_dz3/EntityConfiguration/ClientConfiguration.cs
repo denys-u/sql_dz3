@@ -13,8 +13,8 @@
         {
             builder.ToTable("Client").HasKey(p => p.Id);
             builder.Property(p => p.Id).HasColumnName("ClientId");
-            builder.Property(p => p.FirstName).HasColumnName("FirstName").HasMaxLength(20);
-            builder.Property(p => p.LastName).HasColumnName("LastName").HasMaxLength(20);
+            builder.Property(p => p.FirstName).HasColumnName("FirstName").HasMaxLength(50);
+            builder.Property(p => p.LastName).HasColumnName("LastName").HasMaxLength(50);
             builder.Property(p => p.PhoneNumber).IsRequired().HasColumnName("PhoneNumber").HasMaxLength(20);
             builder.Property(p => p.Email).IsRequired().HasColumnName("DateOfBirth").HasMaxLength(20);
         }

@@ -15,5 +15,7 @@ namespace Sql_dz3.Entity
         public string PhoneNumber { get; set; }
 
         public string Email { get; set; }
+
+        public List<Project> Projects { get; set; } = new List<Project>();
     }
 }
