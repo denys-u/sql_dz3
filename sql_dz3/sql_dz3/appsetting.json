@@ -1,5 +1,0 @@
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "DESKTOP-1GHQEP1\\SQLEXPRESS;Database=AdventureWorks2019;Integrated Security=True"
-  }
-}
