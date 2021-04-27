@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\Sql_dz3.csproj": {}
+    "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\sql_dz3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\Sql_dz3.csproj": {
+    "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\sql_dz3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\Sql_dz3.csproj",
-        "projectName": "Sql_dz3",
-        "projectPath": "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\Sql_dz3.csproj",
+        "projectUniqueName": "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\sql_dz3.csproj",
+        "projectName": "sql_dz3",
+        "projectPath": "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\sql_dz3.csproj",
         "packagesPath": "C:\\Users\\Den\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Den\\source\\repos\\sql_dz3\\sql_dz3\\sql_dz3\\obj\\",
         "projectStyle": "PackageReference",
@@ -34,6 +34,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -42,6 +43,36 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

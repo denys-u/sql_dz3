@@ -1,0 +1,27 @@
+﻿namespace Sql_dz3.EntityConfiguration
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using Sql_dz3.Entity;
+
+    public class ClientConfiguration : IEntityTypeConfiguration<Client>
+    {
+        public void Configure(EntityTypeBuilder<Client> builder)
+        {
+            builder.ToTable("Client").HasKey(p => p.Id);
+            builder.Property(p => p.Id).HasColumnName("ClientId");
+            builder.Property(p => p.FirstName).HasColumnName("FirstName").HasMaxLength(50);
+            builder.Property(p => p.LastName).HasColumnName("LastName").HasMaxLength(50);
+            builder.Property(p => p.PhoneNumber).HasColumnName("PhoneNumber").HasMaxLength(20);
+            builder.Property(p => p.Email).HasColumnName("Email").HasMaxLength(50);
+
+            builder.HasMany(d => d.Projects)
+               .WithOne(p => p.Client)
+               .HasForeignKey(d => d.ClientId)
+               .OnDelete(DeleteBehavior.Restrict);
+        }
+    }
+}
